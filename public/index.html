@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatShat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join ChatShat</h2> <br>
+                <div class="form-input">
+                    <label for="username">Enter Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-input">                   
+                    <button id="join-user">Join</button> <!-- Changed the ID to a unique value -->
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">ChatShat</div>
+                <button id="exit-chat">Exit</button>
+            </div>
+            <div class="messages">
+            <p style="text-align: center;" ><i>Your messages are end-to-end encrypted</i></p>
+            </div>
+            <!-- <div class="typebox"> -->
+                <div class="typebox">
+                    <img src="https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg" alt="Camera icon">
+                    <i><input type="text" id="message-input" placeholder="Write message"></i>
+                    <button id="send-message">Send</button>
+                </div>
+
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
